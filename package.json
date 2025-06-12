@@ -1,0 +1,30 @@
+{
+  "name": "pdf-api-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev:main": "node --loader ts-node/esm api/index.ts",
+    "dev:pdf": "node --loader ts-node/esm api/pdf.tsx",
+    "dev": "concurrently \"npm run dev:main\" \"npm run dev:pdf\"",
+    "start": "concurrently \"node --loader ts-node/esm api/index.ts\" \"node --loader ts-node/esm api/pdf.tsx\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@react-pdf/renderer": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "react": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.1",
+    "@types/react": "^19.1.8",
+    "concurrently": "^9.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
