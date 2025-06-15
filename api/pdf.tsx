@@ -44,6 +44,7 @@ const MyDocument = () => (
 );
 
 app.get("/pdf", async (req: Request, res: Response) => {
+  console.log("PDF API - Route hit");
   const pdfStream = await ReactPDF.renderToStream(<MyDocument />);
   res.setHeader("Content-Type", "application/pdf");
   pdfStream.pipe(res);
